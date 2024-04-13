@@ -244,7 +244,7 @@ const Model = () => {
         ar
         ar-modes="webxr scene-viewer"
         src="/warba_info06.glb"
-        ios-src="/warba_info06.glb"
+        ios-src="/warba_info06.usdz"
         alt="3D Model"
         style={{ width: "100%", height: "100%" }}
       ></model-viewer>
