@@ -1,0 +1,71 @@
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background-image: url("./assets/Layer_0_copy.png");
+  background-size: 100% 100%;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Corrected '100dvh' to '100vh' */
+  overflow: hidden; /* Ensure video stays within container */
+  position: relative; /* Positioning context for the video */
+}
+
+.video::before {
+  content: ""; /* Create a pseudo-element to act as a background layer */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Position the background behind other content */
+}
+
+.video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers entire container */
+  z-index: -999;
+}
+
+.video > * {
+  margin-bottom: 10px;
+}
+
+.image {
+  width: 50%;
+  z-index: 99999;
+}
+
+.button {
+  position: relative;
+  padding: 10px 30px;
+  background-color: white;
+  color: rgb(29, 6, 29);
+  font-size: 22px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.button button {
+  position: relative;
+  z-index: 99999;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
